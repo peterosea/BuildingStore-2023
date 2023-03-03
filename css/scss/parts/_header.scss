@@ -1,0 +1,480 @@
+$height: 90px;
+$height_m: 55px;
+
+.top_menu {
+  width: 100%;
+  height: 50px;
+  background-color: $darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    max-width: $max-width;
+  }
+  p {
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+    display: inline-flex;
+    max-width: 80%;
+  }
+}
+.primary_header {
+  z-index: 99;
+  display: flex;
+  justify-content:center;
+  position: absolute;
+  transform: translateY(0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  &.hidden {
+    transform: translateY(-$height);
+  }
+  &.fixed {
+    position: fixed;
+    transform: translateY(0);
+  }
+  @include respond-to(medium) {
+    position: absolute;
+    transform: unset;
+    &.hidden {
+      transform: unset;
+    }
+    &.fixed {
+      transform: unset;
+    }
+  }
+  .container {
+    display: grid;
+    max-width: $max-width;
+    grid-template-columns: 270px auto;
+    height: $height;
+    align-items: center;
+    background-color: $blue;
+    @include respond-to(large) {
+      justify-content: space-between;
+      align-items: flex-start;
+      grid-template-columns: 232px auto;
+    }
+    @include respond-to(medium) {
+      height: $height_m;
+    }
+  }
+  .menu_container {
+    display: grid;
+    grid-template-columns: auto 270px;
+    position: relative;
+    align-items: center;
+    transition: all 0.3s;
+    z-index: 7;
+    // 서브메뉴 뒷배경
+    > .backboard {
+      display: flex;
+      width: 100%;
+      height: 0;
+      position: absolute;
+      top:0;
+      z-index: 1;
+      background-color: $blue;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s;
+      &.active {
+        height: 330px;
+        visibility: visible;
+        opacity: 1;
+      }
+      @include respond-to(large){
+        display: none;
+      }
+    }
+    @include respond-to(large) {
+      order:2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+    @include respond-to(medium) {
+      background-color: $blue;
+      align-items: flex-start;
+      z-index: 11;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  .mobilemenu {
+    order:3;
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    height: 100%;
+    cursor: pointer;
+    align-items: center;
+    z-index: 8;
+    @include respond-to(large){
+      display: flex;
+    }
+    span {
+      width: 18px;
+      height: 1px;
+      background-color: #fff;
+      transition: all 0.3s;
+      &:last-child {
+        margin-top: 9px;
+      }
+    }
+    &.active, &:hover {
+      span:first-child {
+        transform: rotate(45deg);
+      }
+      span:last-child {
+        transform: rotate(135deg);
+        margin-top: -1px;
+      }
+    }
+    &.active {
+      @include respond-to(medium){
+        z-index:12;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: $height_m;
+      }
+    }
+  }
+  .mobilemenu.active + .menu_container {
+    .navigation {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+    }
+    @include respond-to(medium) {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      position: fixed;
+      top:0;
+      .navigation {
+        overflow-y: scroll;
+        height: calc(100vh - $height_m);
+      }
+    }
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10;
+    .dark {
+      display: block;
+    }
+    .light {
+      display:none;
+    }
+  }
+  .navigation {
+    padding-left: 20px;
+    z-index: 99;
+    transition: all 0.3s;
+    > ul {
+      &:hover > li > a {
+        opacity:0.6;
+        transition: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      > li {
+        padding:0;
+        z-index: 9;
+        &.selected_item > a {
+            background-image: linear-gradient(90deg, rgba(16,131,214,0) 0%, rgba(5,114,188,0.80015756302521) 29%, rgba(0,106,176,1) 50%, rgba(1,99,164,0.8029586834733894) 75%, rgba(2,87,144,0) 100%);
+            background-size: 100%;
+            &:hover {
+              background-size: 0%;
+            }
+        }
+        &:hover > a {
+          background-size: 0%;
+          opacity: 1;
+        }
+        @include respond-to(medium) {
+          padding: 0 0 30px 0;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+          &:not(.has_submenu) {
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+    > ul > li > a {
+      color: #fff;
+      height: $height;
+      padding: 10px 30px;
+      font-weight: 600;
+      transition: all 0.3s;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      &:hover+ul {
+        visibility: visible;
+        opacity: 1;
+      }
+      @include respond-to(laptop) {
+        font-size: 16px;
+        padding:10px 20px;
+      }
+      @include respond-to(large) {
+        padding: 25px 20px;
+        height: auto;
+      }
+      @include respond-to(medium) {
+        padding-top: 10px;
+        height: $height_m;
+      }
+    }
+    @include respond-to(large) {
+      top: 0;
+      order: 2;
+      opacity: 0;
+      visibility: hidden;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height:0;
+      left: 0;
+      padding: 0;
+      > ul {
+        display:grid;
+        grid-template-columns: 36% 24% 40%;
+        grid-row-gap: 20px;
+        background-color: $blue;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        border-top: 1px solid rgba(255,255,255,0.3);
+      }
+    }
+    @include respond-to(medium) {
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .submenu {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    top:100px;
+    transition: all 0.3s;
+    li {
+      position: relative;
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.selected_item {
+        a {
+          background-image: linear-gradient(90deg, rgba(16,131,214,0) 0%, rgba(5,114,188,0.80015756302521) 29%, rgba(0,106,176,1) 50%, rgba(1,99,164,0.8029586834733894) 75%, rgba(2,87,144,0) 100%);
+          background-size: 100%;
+        }
+      }
+      @include respond-to(large) {
+        margin-bottom: 18px;
+      }
+    }
+    a {
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      opacity: 1;
+      padding: 10px 30px;
+      transition: all ease 0.3s;
+      background-size: 30%;
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        background-image: linear-gradient(90deg, rgba(16,131,214,0) 0%, rgba(5,114,188,0.80015756302521) 29%, rgba(0,106,176,1) 50%, rgba(1,99,164,0.8029586834733894) 75%, rgba(2,87,144,0) 100%);
+        background-size: 100%;
+      }
+      @include respond-to(laptop) {
+        font-size: 15px;
+        padding:10px 20px;
+        opacity: 0.7;
+      }
+      @include respond-to(large) {
+        padding: 10px 10px 10px 20px;
+      }
+    }
+    &:hover {
+      visibility: visible;
+      opacity: 1;
+    }
+    @include respond-to(large) {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .sidebar {
+    padding-right: 50px;
+    z-index: 10;
+    ul {
+      justify-content: space-between;
+      align-items: center;
+    }
+    a {
+      color: #fff;
+      transition: all 0.3s;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      opacity: 0.8;
+      @include respond-to(laptop) {
+        font-size: 15px;
+        padding: 0 15px;
+      }
+    }
+    .border_ver {
+      &:before {
+        height: 15px;
+        display: flex;
+      }
+    }
+    @include respond-to(large) {
+      padding-right: 80px;
+      z-index: 9;
+      height: $height;
+      display: flex;
+      align-items: center;
+    }
+    @include respond-to(medium) {
+      padding-right: 0;
+      padding-left: 5px;
+      height: $height_m;
+    }
+  }
+  .search_popup {
+    position: absolute;
+    top:0;
+    left: auto;
+    right: auto;
+    max-width: $max-width;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    // transform: translateY(-100px);
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    &.active {
+      // transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      z-index: 9;
+      @include respond-to(medium) {
+        z-index: 13;
+      }
+    }
+    @include respond-to(medium) {
+      height: auto;
+      position: fixed;
+    }
+    .search_input {
+      width: 100%;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #000;
+      height: 100%;
+      @include respond-to(medium) {
+        font-size: 15px;
+      }
+    }
+    .container {
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto 30px;
+      width: calc(100% - 270px);
+      padding:0 50px 0 20px;
+      background-color: $blue;
+      @include respond-to(large) {
+        width: calc(100% - 232px);
+        justify-content: normal;
+      }
+      @include respond-to(medium) {
+        width:100%;
+        padding: 0 20px;
+      }
+    }
+    .inner_container {
+      width: 100%;
+      height: 100%;
+      max-width: $max-width;
+      padding: 15px 0;
+      display: grid;
+      align-items: center;
+      justify-content: normal;
+      grid-template-columns: auto 80px;
+      @include respond-to(medium) {
+        padding: 5px 0;
+      }
+    }
+    .btn_search {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background-color: #000;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include respond-to(medium) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+body.page_product {
+  .primary_header {
+    position: relative;
+    background-color: $blue;
+    .logo {
+      background-color: #000;
+      .dark {
+        display: none;
+      }
+      .light {
+        display:block;
+      }
+    }
+  }
+}
