@@ -1,4 +1,7 @@
 body.page_product {
+  ul {
+    display:flex;
+  }
   section {
     width: 100%;
     display: flex;
@@ -41,7 +44,10 @@ body.page_product {
         grid-gap: 30px;
       }
     }
-    
+    > form {
+      width: 100%;
+      max-width: 980px;
+    }
   }
   .title {
     font-size: 36px;

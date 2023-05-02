@@ -1,0 +1,169 @@
+body.single.page {
+  /////////// 라이선스 정책
+  .product_wrap.page_license_wrap {
+    max-width: unset;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    .row_container.image_wrap {
+      width: 100%;
+    }
+    .text_wrap_bg {
+      max-width: 1400px;
+    }
+  }
+  /////////// 클래식 판매 종료
+  article.page_goodbye_wrap {
+    width: 100%;
+    .fix_width.row_container {
+      max-width: 1400px;
+    }
+  }
+  footer {
+    margin-top:130px;
+  }
+
+}
+
+// 탭 디자인
+.pop_tab {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .col_3 {
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: #999;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    padding: 14px 0;
+    width: 100%;
+    background: #eaeaea;
+  }
+  a.active {
+    background: #005f9e;
+    color: white;
+    border: none;
+  }
+}
+.pop_inner {
+  .accountFrom {
+    div[class*="col"] {
+      display: flex;
+      align-items: center;
+    }
+    .row_container b {
+      font-size: 14px;
+    }
+  }
+  .col_3, .col_1_3 {
+    width: 32%;
+    margin-right: 2%;
+  }
+  .col_2_3 {
+    width: 66%;
+  }
+  .row_container *[class*="col_"]:nth-last-child(1) {
+    margin-right: 0;
+  }
+}
+// 버튼 디자인
+.accountFrom .black_btn {
+  border: none;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+// 회원가입/로그인/카트등 페이지
+body {
+  // 회원가입, 마이페이지
+  &.register, &.mypage.summary, &.oneid, &.cart {
+    .primary_header {
+      position: relative;
+    }
+    section.container {
+      padding-top: 90px;
+    } 
+  }
+  &.register {
+    .pop_inner ul {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+  }
+  // 결제페이지
+  .order.summary {
+    .row_container .col_addr {
+      width: 66%;
+    }
+  }
+  &.oneid {
+    .popup.wrapper {
+      margin-top: 90px;
+      margin-bottom: 0;
+    }
+  }
+
+  // 마이페이지
+  &.mypage {
+    .pop_tab.row_container {
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+    }
+    .pop_inner .row_container {
+      display: flex;
+      margin: 10px 0;
+    }
+    
+    .pop_inner .tab_plan .title_row {
+      margin-bottom: 30px;
+    }
+  }
+  &.mypage.summary {
+    .primary_header .container {
+      padding-top: 0;
+    }
+    // 아이디 비번찾기
+    .accountFrom {
+      h4 {
+        margin: 0;
+      }
+      div[class*="col"] {
+        display: flex;
+        align-items: center;
+      }
+      .col_2_3 .myaddr {
+        width: 100%;
+      }
+    }
+    #frmMypage .pop_inner {
+      padding: 0;
+    }
+    .pop_tab {
+      .col_3 {
+        width: 50%;
+        margin: 0;
+      }
+    }
+  }
+  // 제품추천페이지
+  .page_recommend_wrap {
+    .popup_recommend {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
