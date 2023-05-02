@@ -2,11 +2,19 @@ $height: 90px;
 $height_m: 55px;
 
 body.home {
+  ul {
+    display:flex;
+  }
   section {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 120px;
+    > form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
     .container.fixed_width {
       position: relative;
       flex-direction: column;
@@ -124,11 +132,11 @@ body.home {
     position: relative;
     .content {
       position: absolute;
-      left: 795px;
+      left: 787px;
       bottom: 155px;
       background-color: #fff;
       width: 80%;
-      max-width: 855px;
+      max-width: 864px;
       height:470px;
       display: flex;
       flex-direction: column;
@@ -138,6 +146,9 @@ body.home {
       }
       .align-left {
         justify-content: flex-end;
+        @include respond-to(small) {
+          justify-content: flex-start;
+        }
       }
       .align-right {
         justify-content: flex-start;
@@ -145,7 +156,8 @@ body.home {
       @include respond-to(desktop){
         left:auto;
         right:85px;
-        max-width:763px;
+        max-width:750px;
+        padding-left: 70px;
       }
       @media screen and (max-width: 980px) {
         width: 75%;
@@ -169,10 +181,14 @@ body.home {
         font-size: 48px;
         font-weight: 200;
         margin: 0;
+        letter-spacing: -0.05em;
+        @include respond-to(desktop){
+          font-size: 42px;
+        }
         @media screen and (max-width: 980px) {
           font-size: 36px;
         }
-        @include respond-to(medium) {
+        @include respond-to(small) {
           font-size: 25px;
         }
       }
@@ -181,6 +197,7 @@ body.home {
         font-weight: 200;
         margin-top: 24px;
         margin-bottom: 0;
+        letter-spacing: -0.03em;
         @include respond-to(medium) {
           font-size: 16px;
         }
@@ -191,10 +208,15 @@ body.home {
       .darkblue {
         color:$darkblue;
       }
+      b {
+        letter-spacing: -0.03em;
+        span {
+          font-weight: 300;
+        }
+      }
     }
     .btn_wrapper {
       width: 100%;
-      max-width: 230px;
       height: $height;
       display: flex;
       position: absolute;
@@ -208,6 +230,8 @@ body.home {
         align-items:center;
         padding-left: 35px;
         padding-right: 25px;
+        max-width: 230px;
+        margin-right: 1px;
       }
     }
     .image {
@@ -215,7 +239,7 @@ body.home {
       height:870px;
       overflow: hidden;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       @include respond-to(desktop) {
         width:87%;
       }
@@ -224,6 +248,7 @@ body.home {
       }
       img {
         object-fit: cover;
+        width: 100%;
       }
     }
   }
@@ -730,11 +755,6 @@ body.home {
           height: 7px;
         }
       }
-    }
-  }
-  .video_wrapper {
-    .container.fixed_width {
-      max-width: unset;
     }
   }
 }
