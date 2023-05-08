@@ -103,9 +103,13 @@ body {
     }
   }
   // 결제페이지
-  .order.summary {
+  &.order.summary {
     .row_container .col_addr {
       width: 66%;
+    }
+    .col_addr .btnPostCd {
+      width: 66%;
+      border-radius: 0;
     }
   }
   &.oneid {
@@ -125,12 +129,17 @@ body {
     .pop_inner .row_container {
       display: flex;
       margin: 10px 0;
+      &.mt40 {
+        margin-top: 40px;
+      }
     }
     
     .pop_inner .tab_plan .title_row {
       margin-bottom: 30px;
     }
+
   }
+
   &.mypage.summary {
     .primary_header .container {
       padding-top: 0;
@@ -157,7 +166,39 @@ body {
         margin: 0;
       }
     }
+    .myaddr .btnPostCd {
+      width: 66%;
+      border-radius: 0;
+    }
   }
+
+  // 팝업
+  .popup_passwd, .popup_privacy, .popup_terms {
+      .popup_content {
+      background-color: #fff;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      border:none;
+      .title_row {
+        margin-bottom: 40px;
+      }
+      .btn_wrap {
+        .black_btn {
+          justify-content: center;
+        }
+        .border_btn {
+          padding-top: 14px;
+          padding-bottom: 14px;
+          font-size: 18px;
+          font-weight: 400;
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+  }
+
   // 제품추천페이지
   .page_recommend_wrap {
     .popup_recommend {

@@ -473,6 +473,23 @@ body.page_product, body.register, body.mypage, body.oneid {
   .primary_header {
     position: relative;
     background-color: $blue;
+    &.hidden {
+      transform: translateY(-$height);
+    }
+    &.fixed {
+      position: fixed;
+      transform: translateY(0);
+    }
+    @include respond-to(medium) {
+      position: absolute;
+      transform: unset;
+      &.hidden {
+        transform: unset;
+      }
+      &.fixed {
+        transform: unset;
+      }
+    }
     .logo {
       background-color: #000;
       .dark {
