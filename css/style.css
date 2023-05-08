@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+.mt40 {
+  margin-top: 40px;
+}
+
 body, div, p, h1, h2, h3, h4, h5, h6, span {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.01em;
@@ -982,6 +986,25 @@ img.mobile {
 body.page_product .primary_header, body.register .primary_header, body.mypage .primary_header, body.oneid .primary_header {
   position: relative;
   background-color: #1083d6;
+}
+body.page_product .primary_header.hidden, body.register .primary_header.hidden, body.mypage .primary_header.hidden, body.oneid .primary_header.hidden {
+  transform: translateY(-90px);
+}
+body.page_product .primary_header.fixed, body.register .primary_header.fixed, body.mypage .primary_header.fixed, body.oneid .primary_header.fixed {
+  position: fixed;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  body.page_product .primary_header, body.register .primary_header, body.mypage .primary_header, body.oneid .primary_header {
+    position: absolute;
+    transform: unset;
+  }
+  body.page_product .primary_header.hidden, body.register .primary_header.hidden, body.mypage .primary_header.hidden, body.oneid .primary_header.hidden {
+    transform: unset;
+  }
+  body.page_product .primary_header.fixed, body.register .primary_header.fixed, body.mypage .primary_header.fixed, body.oneid .primary_header.fixed {
+    transform: unset;
+  }
 }
 body.page_product .primary_header .logo, body.register .primary_header .logo, body.mypage .primary_header .logo, body.oneid .primary_header .logo {
   background-color: #000;
@@ -2226,8 +2249,12 @@ body.register .pop_inner ul {
   margin-bottom: 40px;
   padding-bottom: 20px;
 }
-body .order.summary .row_container .col_addr {
+body.order.summary .row_container .col_addr {
   width: 66%;
+}
+body.order.summary .col_addr .btnPostCd {
+  width: 66%;
+  border-radius: 0;
 }
 body.oneid .popup.wrapper {
   margin-top: 90px;
@@ -2241,6 +2268,9 @@ body.mypage .pop_tab.row_container {
 body.mypage .pop_inner .row_container {
   display: flex;
   margin: 10px 0;
+}
+body.mypage .pop_inner .row_container.mt40 {
+  margin-top: 40px;
 }
 body.mypage .pop_inner .tab_plan .title_row {
   margin-bottom: 30px;
@@ -2264,6 +2294,31 @@ body.mypage.summary #frmMypage .pop_inner {
 body.mypage.summary .pop_tab .col_3 {
   width: 50%;
   margin: 0;
+}
+body.mypage.summary .myaddr .btnPostCd {
+  width: 66%;
+  border-radius: 0;
+}
+body .popup_passwd .popup_content, body .popup_privacy .popup_content, body .popup_terms .popup_content {
+  background-color: #fff;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  border: none;
+}
+body .popup_passwd .popup_content .title_row, body .popup_privacy .popup_content .title_row, body .popup_terms .popup_content .title_row {
+  margin-bottom: 40px;
+}
+body .popup_passwd .popup_content .btn_wrap .black_btn, body .popup_privacy .popup_content .btn_wrap .black_btn, body .popup_terms .popup_content .btn_wrap .black_btn {
+  justify-content: center;
+}
+body .popup_passwd .popup_content .btn_wrap .border_btn, body .popup_privacy .popup_content .btn_wrap .border_btn, body .popup_terms .popup_content .btn_wrap .border_btn {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 0 10px;
 }
 body .page_recommend_wrap .popup_recommend img {
   max-width: 100%;
