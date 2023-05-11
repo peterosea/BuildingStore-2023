@@ -552,7 +552,7 @@ img.mobile {
 }
 .primary_header .menu_container {
   display: grid;
-  grid-template-columns: auto 270px;
+  grid-template-columns: auto 180px;
   position: relative;
   align-items: center;
   transition: all 0.3s;
@@ -1967,7 +1967,13 @@ body.page_product .thumbnail {
   justify-content: center;
 }
 body.page_product .thumbnail img {
-  max-width: 100%;
+  max-width: 390px;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  max-height: 305px;
+  object-position: top center;
 }
 body.page_product .summary {
   padding: 90px 0 100px;

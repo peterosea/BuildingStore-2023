@@ -73,7 +73,8 @@ $height_m: 55px;
   }
   .menu_container {
     display: grid;
-    grid-template-columns: auto 270px;
+    grid-template-columns: auto 180px;
+    // grid-template-columns: auto 270px; //사이드바 메뉴가 3개일때
     position: relative;
     align-items: center;
     transition: all 0.3s;
