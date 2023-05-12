@@ -79,6 +79,11 @@ body.home {
         position: absolute;
         opacity: 0.8;
       }
+      @include respond-to(laptop) {
+        &.image {
+          display: none;
+        }
+      }
     }
     .swiper-button-prev, .swiper-button-next {
       color: #fff;

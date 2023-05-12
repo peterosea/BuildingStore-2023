@@ -1193,6 +1193,11 @@ body.home .swiper_section .bg_image img {
   position: absolute;
   opacity: 0.8;
 }
+@media (max-width: 1560px) {
+  body.home .swiper_section .bg_image.image {
+    display: none;
+  }
+}
 body.home .swiper_section .swiper-button-prev, body.home .swiper_section .swiper-button-next {
   color: #fff;
   width: 67px;
