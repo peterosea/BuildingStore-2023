@@ -40,7 +40,7 @@ footer {
     display: flex;
     grid-gap: 35px;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     @include respond-to(medium) {
       grid-gap: 20px;
       display: grid;
