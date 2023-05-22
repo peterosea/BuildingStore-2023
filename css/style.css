@@ -1104,6 +1104,10 @@ footer .separator {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+body.page_recommend {
+  margin-top: 0;
+}
+
 body.home ul {
   display: flex;
 }
@@ -2192,6 +2196,254 @@ body.page_product .introduction .container .detail {
 }
 body.page_product .introduction img {
   max-width: 100%;
+}
+
+/*SCSS*/
+article.page_recommend_wrap {
+  padding: 40px 0 70px;
+}
+article.page_recommend_wrap * {
+  box-sizing: border-box;
+}
+article.page_recommend_wrap .row_container {
+  display: flex;
+  flex-direction: column;
+}
+article.page_recommend_wrap .row_container.row_1col {
+  flex-direction: row;
+}
+article.page_recommend_wrap .row_container.fix_width {
+  justify-content: center;
+}
+article.page_recommend_wrap .row_container.fix_width .col_container {
+  max-width: 1280px;
+  width: 100%;
+}
+article.page_recommend_wrap .row_container.fullwidth .col_container {
+  width: 100%;
+}
+article.page_recommend_wrap .row_container.check_cart_wrap {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+}
+article.page_recommend_wrap .row_container.check_cart_wrap .check_cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+article.page_recommend_wrap .row_container.check_cart_wrap .check_cart h6 {
+  font-size: 20px;
+  margin: 0;
+}
+article.page_recommend_wrap .row_container.check_cart_wrap .check_cart .btn_check_cart {
+  background-color: #d63e39;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 124px;
+  height: 40px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+article.page_recommend_wrap .row_container.check_cart_wrap .thumbnail {
+  background-color: transparent;
+}
+article.page_recommend_wrap .row_container.check_cart_wrap .thumbnail img {
+  border: none;
+}
+article.page_recommend_wrap .row_container.title_wrap {
+  padding: 120px 20px 80px;
+}
+article.page_recommend_wrap .row_container.title_wrap .section_title {
+  text-align: center;
+}
+article.page_recommend_wrap .row_container.title_wrap .section_title h1 {
+  font-size: 46px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+article.page_recommend_wrap .row_container.title_wrap .section_title span {
+  font-size: 18px;
+}
+article.page_recommend_wrap .row_container.products_wrap ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+@media (max-width: 960px) {
+  article.page_recommend_wrap .row_container.products_wrap ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  article.page_recommend_wrap .row_container.products_wrap ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+article.page_recommend_wrap .row_container.products_wrap li {
+  list-style: none;
+  text-align: center;
+}
+article.page_recommend_wrap .row_container.products_wrap li:last-child {
+  margin-right: 0;
+}
+article.page_recommend_wrap .row_container.products_wrap li .thumb {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+article.page_recommend_wrap .row_container.products_wrap li .thumb img {
+  max-width: 100%;
+}
+article.page_recommend_wrap .row_container.products_wrap li .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.2em;
+}
+article.page_recommend_wrap .row_container.products_wrap li .price {
+  font-size: 15px;
+  color: #d63e39;
+  margin-bottom: 30px;
+}
+article.page_recommend_wrap .row_container.products_wrap li .desc {
+  font-size: 15px;
+  margin-bottom: 35px;
+  text-align: left;
+  line-height: 1.4em;
+}
+@media (max-width: 960px) {
+  article.page_recommend_wrap .row_container.products_wrap li {
+    margin-bottom: 40px;
+  }
+}
+article.page_recommend_wrap .btn_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+article.page_recommend_wrap .btn_wrap .btn {
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  justify-content: center;
+}
+article.page_recommend_wrap .btn_wrap .btn_cart {
+  background-color: #d63e39;
+  width: 100%;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.4em;
+  transition: all 0.3s;
+}
+article.page_recommend_wrap .btn_wrap .btn_cart:before {
+  content: "\f07a";
+  margin-right: 10px;
+}
+article.page_recommend_wrap .btn_wrap .btn_cart.fa-check {
+  background-color: #555;
+}
+article.page_recommend_wrap .btn_wrap .btn_cart.fa-check:before {
+  content: "\f00c";
+}
+article.page_recommend_wrap .btn_wrap .btn_cart:hover {
+  background-color: #c11d16;
+}
+article.page_recommend_wrap .btn_wrap .btn_detail_pop {
+  color: #000;
+  font-size: 15px;
+  text-decoration: underline;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+article.page_recommend_wrap .btn_wrap .btn_detail_pop:hover {
+  color: #d63e39;
+}
+
+.popup_recommend {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(100, 100, 100, 0.6);
+  opacity: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+.popup_recommend.show {
+  opacity: 1;
+}
+.popup_recommend.active {
+  z-index: 500;
+}
+.popup_recommend .popup_close {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 501;
+}
+.popup_recommend .popup_content {
+  border: none;
+  max-width: 800px;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  z-index: 502;
+  background-color: transparent;
+}
+@media (max-width: 960px) {
+  .popup_recommend .popup_content {
+    width: 90%;
+  }
+}
+.popup_recommend .pop_container_wrap {
+  height: 100%;
+}
+.popup_recommend .pop_container {
+  display: none;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0;
+  height: 100%;
+}
+.popup_recommend .pop_container.show {
+  display: flex;
+}
+.popup_recommend .pop_container .pop_title h2 {
+  font-size: 32px;
+  padding: 40px 20px;
+  line-height: 1.2em;
+}
+.popup_recommend .pop_container .pop_title h2 p {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 0;
+  line-height: 1.4em;
+}
+.popup_recommend .pop_container .pop_title h2 p span {
+  color: #d63e39;
+}
+.popup_recommend .pop_container .pop_inner {
+  height: 100%;
+  overflow: auto;
 }
 
 body.single.page .product_wrap.page_license_wrap {
