@@ -1104,7 +1104,7 @@ footer .separator {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-body.page_recommend {
+body.page_recommend footer {
   margin-top: 0;
 }
 
@@ -2200,7 +2200,7 @@ body.page_product .introduction img {
 
 /*SCSS*/
 article.page_recommend_wrap {
-  padding: 40px 0 70px;
+  padding: 0px 0px 70px;
 }
 article.page_recommend_wrap * {
   box-sizing: border-box;
@@ -2239,7 +2239,7 @@ article.page_recommend_wrap .row_container.check_cart_wrap .check_cart h6 {
   margin: 0;
 }
 article.page_recommend_wrap .row_container.check_cart_wrap .check_cart .btn_check_cart {
-  background-color: #d63e39;
+  background-color: #025C92;
   color: #fff;
   display: flex;
   align-items: center;
@@ -2257,7 +2257,7 @@ article.page_recommend_wrap .row_container.check_cart_wrap .thumbnail img {
   border: none;
 }
 article.page_recommend_wrap .row_container.title_wrap {
-  padding: 120px 20px 80px;
+  padding: 20px 20px 80px;
 }
 article.page_recommend_wrap .row_container.title_wrap .section_title {
   text-align: center;
@@ -2308,9 +2308,10 @@ article.page_recommend_wrap .row_container.products_wrap li .title {
   line-height: 1.2em;
 }
 article.page_recommend_wrap .row_container.products_wrap li .price {
-  font-size: 15px;
-  color: #d63e39;
+  font-size: 18px;
+  color: #025C92;
   margin-bottom: 30px;
+  font-weight: 400;
 }
 article.page_recommend_wrap .row_container.products_wrap li .desc {
   font-size: 15px;
@@ -2337,7 +2338,7 @@ article.page_recommend_wrap .btn_wrap .btn {
   justify-content: center;
 }
 article.page_recommend_wrap .btn_wrap .btn_cart {
-  background-color: #d63e39;
+  background-color: #025C92;
   width: 100%;
   padding: 10px 20px;
   color: #fff;
@@ -2356,9 +2357,6 @@ article.page_recommend_wrap .btn_wrap .btn_cart.fa-check {
 article.page_recommend_wrap .btn_wrap .btn_cart.fa-check:before {
   content: "\f00c";
 }
-article.page_recommend_wrap .btn_wrap .btn_cart:hover {
-  background-color: #c11d16;
-}
 article.page_recommend_wrap .btn_wrap .btn_detail_pop {
   color: #000;
   font-size: 15px;
@@ -2369,7 +2367,7 @@ article.page_recommend_wrap .btn_wrap .btn_detail_pop {
   transition: all 0.3s;
 }
 article.page_recommend_wrap .btn_wrap .btn_detail_pop:hover {
-  color: #d63e39;
+  color: #025C92;
 }
 
 .popup_recommend {
@@ -2439,7 +2437,7 @@ article.page_recommend_wrap .btn_wrap .btn_detail_pop:hover {
   line-height: 1.4em;
 }
 .popup_recommend .pop_container .pop_title h2 p span {
-  color: #d63e39;
+  color: #025C92;
 }
 .popup_recommend .pop_container .pop_inner {
   height: 100%;

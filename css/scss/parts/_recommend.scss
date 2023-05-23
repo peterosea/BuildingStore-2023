@@ -1,5 +1,3 @@
-$point_color: #d63e39;
-$hover_color: #c11d16;
 $fontH1:46px;
 $fontH3:21px;
 $fontP:15px;
@@ -21,7 +19,7 @@ $break-large: 960px;
 }
 
 article.page_recommend_wrap {
-    padding: 40px 0 70px;
+    padding: 0px 0px 70px;
     * {
         box-sizing: border-box;
     }
@@ -63,7 +61,7 @@ article.page_recommend_wrap {
                 margin: 0;
             }
             .btn_check_cart {
-                background-color: $point_color;
+                background-color: $darkblue;
                 color: #fff;
                 display: flex;
                 align-items: center;
@@ -83,7 +81,7 @@ article.page_recommend_wrap {
         }
     }
     .row_container.title_wrap {
-        padding: 120px 20px 80px;
+        padding: 20px 20px 80px;
         .section_title {
             text-align: center;
             h1 {
@@ -138,9 +136,10 @@ article.page_recommend_wrap {
                 line-height: 1.2em;
             }
             .price {
-                font-size: 15px;
-                color: $point_color;
+                font-size: 18px;
+                color: $darkblue;
                 margin-bottom: 30px;
+                font-weight: 400;
             }
             .desc {
                 font-size: 15px;
@@ -175,7 +174,7 @@ article.page_recommend_wrap {
             justify-content: center;
         }
         .btn_cart {
-            background-color:$point_color;
+            background-color:$darkblue;
             width:100%;
             padding:10px 20px;
             color:#fff;
@@ -193,9 +192,6 @@ article.page_recommend_wrap {
                     content: "\f00c";
                 }
             }
-            &:hover {
-                background-color: $hover_color;
-            }
         }
         .btn_detail_pop {
             color:#000;
@@ -206,7 +202,7 @@ article.page_recommend_wrap {
             font-weight: bold;
             transition: all 0.3s;
             &:hover {
-                color: $point_color;
+                color: $darkblue;
             }
         }
     }
@@ -280,7 +276,7 @@ article.page_recommend_wrap {
                 margin-bottom: 0;
                 line-height: 1.4em;
                 span {
-                    color: $point_color;
+                    color: $darkblue;
                 }
             }
         }
