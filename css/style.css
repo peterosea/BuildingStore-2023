@@ -2614,6 +2614,8 @@ body .page_recommend_wrap .popup_recommend img {
   width: 100%;
   height: 100%;
   display: flex;
+  opacity: 0;
+  z-index: -1;
   justify-content: center;
   transition: all 0.5s;
   animation-duration: 0.5s;
