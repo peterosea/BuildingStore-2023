@@ -23,6 +23,9 @@ article.page_recommend_wrap {
     * {
         box-sizing: border-box;
     }
+    @include respond-to(large) {
+        padding: 0px 40px 40px;
+    }
 
     .row_container {
         display: flex;
@@ -98,18 +101,9 @@ article.page_recommend_wrap {
     .row_container.products_wrap {
         ul {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 40px;
-            // display: flex;
-            // flex-direction: row;
-            // align-items: stretch;
-            // justify-content:center;
-            // padding:0;
-            // flex-wrap: wrap;
             @include respond-to(large) {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            @include respond-to(small) {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
