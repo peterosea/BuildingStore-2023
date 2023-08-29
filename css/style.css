@@ -20,6 +20,7 @@ body, div, p, span, a {
 
 html, body {
   margin: 0;
+  height: 100%;
 }
 
 ul {
@@ -46,6 +47,7 @@ img {
   align-items: center;
   flex-direction: column;
   position: relative;
+  height: 100%;
 }
 
 .container {
@@ -2538,9 +2540,8 @@ body.order.summary .col_addr .btnPostCd {
   width: 66%;
   border-radius: 0;
 }
-body.oneid .popup.wrapper {
-  margin-top: 90px;
-  margin-bottom: 0;
+body.oneid footer {
+  margin-top: 0;
 }
 body.mypage .pop_tab.row_container {
   margin-left: 0;
@@ -2692,4 +2693,41 @@ body .page_recommend_wrap .popup_recommend img {
   z-index: 9;
   animation-duration: 0.5s;
   animation-name: fadein;
+}
+
+body.oneid .page_wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+body.oneid .popup.wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: auto;
+  left: auto;
+  overflow: auto;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border: none;
+}
+body.oneid .popup.wrapper ._container {
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #aaa;
+  padding: 60px 30px;
+}
+body.oneid .popup.wrapper ._container._information {
+  border: none;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
 }

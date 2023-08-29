@@ -113,9 +113,12 @@ body {
     }
   }
   &.oneid {
-    .popup.wrapper {
-      margin-top: 90px;
-      margin-bottom: 0;
+    // .popup.wrapper {
+    //   margin-top: 90px;
+    //   margin-bottom: 0;
+    // }
+    footer {
+      margin-top: 0;
     }
   }
 

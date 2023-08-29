@@ -83,3 +83,42 @@
   animation-duration: 0.5s;
   animation-name: fadein;
 }
+
+body.oneid {
+  .page_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+  }
+  .popup.wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    overflow: auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border: none;
+    ._container {
+      flex-direction: column;
+      width: 100%;
+      border: 1px solid #aaa;
+      padding: 60px 30px;
+      &._information {
+        border: none;
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+      }
+    }
+  }
+}
