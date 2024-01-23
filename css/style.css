@@ -256,7 +256,7 @@ img.mobile {
   appearance: none;
 }
 .input-number-group .input-group-button {
-  line-height: calc(44px/2 - 5px);
+  line-height: calc(44px / 2 - 5px);
 }
 .input-number-group .input-number {
   width: 24px;
@@ -2605,6 +2605,42 @@ body .popup_passwd .popup_content .btn_wrap .border_btn, body .popup_privacy .po
 }
 body .page_recommend_wrap .popup_recommend img {
   max-width: 100%;
+}
+
+.page_system section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.page_system .pagenotfound {
+  min-height: calc(100vh - 342px);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page_system .pagenotfound h1, .page_system .pagenotfound h2, .page_system .pagenotfound p {
+  color: #1178d0;
+}
+.page_system .pagenotfound h1 {
+  margin-top: 130px;
+  font-size: 150px;
+  margin: 0;
+  line-height: 0.8;
+}
+.page_system .pagenotfound h2 {
+  font-size: 41px;
+  margin: 0;
+  line-height: 1;
+}
+.page_system .pagenotfound p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 40px;
+}
+.page_system .pagenotfound .img {
+  margin-top: 40px;
 }
 
 .popup {
