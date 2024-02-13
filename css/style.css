@@ -1353,6 +1353,16 @@ body.home .swiper-slide .text_wrapper p {
     font-size: 16px;
   }
 }
+body.home .swiper-slide .text_wrapper ul {
+  flex-direction: column;
+  margin-top: 24px;
+}
+body.home .swiper-slide .text_wrapper ul li {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
 body.home .swiper-slide .text_wrapper .blue {
   color: #1083d6;
 }
