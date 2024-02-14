@@ -2659,7 +2659,7 @@ body .page_recommend_wrap .popup_recommend img {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   transition: all 0.5s;
   animation-duration: 0.5s;
@@ -2752,7 +2752,7 @@ body.oneid .popup.wrapper {
   margin-bottom: 0;
   flex-direction: column;
   position: relative;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   top: auto;
