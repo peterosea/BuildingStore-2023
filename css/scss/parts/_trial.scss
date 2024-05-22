@@ -279,6 +279,10 @@ body.trialForm {
         display: grid;
         grid-template-columns: 1fr 12px 1fr auto;
         grid-column-gap: 10px;
+        &.col-5 {
+          grid-template-columns: 1fr 12px 1fr 1fr auto;
+          grid-column-gap: 5px;
+        }
         @include respond-to(medium) {
           grid-column-gap: 5px;
         }
