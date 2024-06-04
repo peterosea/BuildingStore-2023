@@ -1,0 +1,255 @@
+	
+$point_color: #005f9e;
+$font_16:16px;
+$font_20:20px;
+$font_24:24px;
+
+// 라이선스 페이지
+.page_license_wrap {
+    .row_container:nth-child(3) .section_title h3:before{
+        content:'02';
+    }
+    .row_container:nth-child(4) .section_title h3:before{
+        content:'03';
+    }
+    .row_container:nth-child(5) .section_title h3:before{
+        content:'04';
+    }
+    .row_container:nth-child(6) .section_title h3:before{
+        content:'05';
+    }
+    .row_container:nth-child(7) .section_title h3:before{
+        content:'06';
+    }
+    .row_container:nth-child(8) .section_title h3:before{
+        content:'07';
+    }
+    .row_container:nth-child(9) .section_title h3:before{
+        content:'08';
+    }
+    .row_container:nth-child(10) .section_title h3:before{
+        content:'09';
+    }
+    .row_container:nth-child(11) .section_title h3:before{
+        content:'10';
+    }
+
+    .visual_title {
+        color: #fff;
+        text-align: center;
+        h1 {
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 30px;
+            line-height: 1.4em;
+            @media (max-width:640px){
+                font-size: 32px;
+            }
+        }
+        p {
+            font-size: $font_16;
+        }
+        p.subtitle {
+            font-size: 22px;
+            margin-bottom: 30px;
+            @media (max-width:640px){
+                font-size:$font_20;
+            }
+        }
+    }
+
+    .text_wrap_bg {
+        background-color:#f7f7f7;
+        padding: 65px 70px;
+        @media (max-width:960px) {
+            padding: 30px;
+        }
+
+        .text_container {
+            p {
+                font-size: $font_16;
+                line-height: 1.8em;
+                word-break: keep-all;
+            }
+
+            p .point_color {
+                color: $point_color;
+                font-size: $font_16;
+                font-weight: bold;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            li {
+                font-weight: bold;
+                padding-bottom: 5px;
+                ul {
+                    padding-left: 0px;
+                    padding-top: 8px;
+                }
+                li {
+                    list-style:none;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .section_title {
+        h3 {
+            font-size: $font_24;
+            font-weight: normal;
+            padding-left: 40px;
+            position: relative;
+            margin-top: 14px;
+            @media (max-width:768px){
+                padding-left: 0;
+                padding-top: 40px;
+            }
+            b {
+                font-size: $font_24; 
+            }
+            span {
+                font-size: $font_20;
+                line-height: 1.4em;
+            }
+            &:before {
+                content:'01';
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .module_wrap.btn_container {
+        display: flex;
+        
+
+        &.btn_grp {
+            flex-wrap: wrap;
+            grid-column-gap: 10px;
+            .point_btn {
+                justify-content: space-between;
+                @media (max-width:1280px) {
+                    width:100%;
+                }
+            }
+        }
+        .point_btn {
+            background-color:$point_color !important;
+            color: white;
+            font-size: $font_16;
+            padding:15px 60px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            @media (max-width:1280px) {
+                padding:15px 30px;
+            }
+            b {
+                font-size: $font_16;
+            }
+            img {
+                margin-left:10px;
+            }
+        }
+    }
+
+    .row_container.fullwidth {
+        width: 100%;
+        .headcopy h3 {
+            font-size: 26px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .align_center {
+            justify-content: center;
+        }
+
+        .point_btn {
+            font-size: $font_20;
+        }
+    }
+}
+.col_container.bg_fullwidth { 
+    background-position: center center;
+    background-size: cover;
+    padding: 80px 40px;
+
+    @media (min-width:768px){
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+    
+}
+
+// 라이선스 팝업
+.popup_license {
+    .popup_content {
+        max-width: 520px;
+        width:90%;
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        background-color: #fff;
+        border:none;
+
+        .title_wrap {
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e3e3e3;
+            h2 {
+                text-transform: uppercase;
+                font-size: 28px;
+                font-weight: bold;
+                color: black;
+                font-family: 'Oswald';
+                text-align: center;
+            }
+        }
+        p {
+            line-height: 1.6em;
+            .point_color {
+                color: $point_color;
+                font-size: $font_16;
+                font-weight: bold;
+            }
+        }
+
+        .point_btn {
+            background-color:$point_color !important;
+            color: white;
+            font-size: $font_16;
+            padding:15px 30px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            justify-content: center;
+            @media (min-width:768px) {
+                padding:15px 60px;
+            }
+            b {
+                font-size: $font_16;
+            }
+        }
+    }
+
+    .btn_close{
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        position: absolute;
+        color: #aaa;
+        transition: color 0.3s;
+        cursor: pointer;
+        z-index: 2;
+    }
+}

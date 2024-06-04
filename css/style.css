@@ -3570,6 +3570,265 @@ body.trialComplete .btn_wrap .btn-blackline .arrow_tail:after {
   background-color: #000;
 }
 
+.page_license_wrap .row_container:nth-child(3) .section_title h3:before {
+  content: "02";
+}
+.page_license_wrap .row_container:nth-child(4) .section_title h3:before {
+  content: "03";
+}
+.page_license_wrap .row_container:nth-child(5) .section_title h3:before {
+  content: "04";
+}
+.page_license_wrap .row_container:nth-child(6) .section_title h3:before {
+  content: "05";
+}
+.page_license_wrap .row_container:nth-child(7) .section_title h3:before {
+  content: "06";
+}
+.page_license_wrap .row_container:nth-child(8) .section_title h3:before {
+  content: "07";
+}
+.page_license_wrap .row_container:nth-child(9) .section_title h3:before {
+  content: "08";
+}
+.page_license_wrap .row_container:nth-child(10) .section_title h3:before {
+  content: "09";
+}
+.page_license_wrap .row_container:nth-child(11) .section_title h3:before {
+  content: "10";
+}
+.page_license_wrap .visual_title {
+  color: #fff;
+  text-align: center;
+}
+.page_license_wrap .visual_title h1 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  line-height: 1.4em;
+}
+@media (max-width: 640px) {
+  .page_license_wrap .visual_title h1 {
+    font-size: 32px;
+  }
+}
+.page_license_wrap .visual_title p {
+  font-size: 16px;
+}
+.page_license_wrap .visual_title p.subtitle {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  .page_license_wrap .visual_title p.subtitle {
+    font-size: 20px;
+  }
+}
+.page_license_wrap .text_wrap_bg {
+  background-color: #f7f7f7;
+  padding: 65px 70px;
+}
+@media (max-width: 960px) {
+  .page_license_wrap .text_wrap_bg {
+    padding: 30px;
+  }
+}
+.page_license_wrap .text_wrap_bg .text_container p {
+  font-size: 16px;
+  line-height: 1.8em;
+  word-break: keep-all;
+}
+.page_license_wrap .text_wrap_bg .text_container p .point_color {
+  color: #005f9e;
+  font-size: 16px;
+  font-weight: bold;
+}
+.page_license_wrap .text_wrap_bg .text_container ul {
+  padding-left: 20px;
+}
+.page_license_wrap .text_wrap_bg .text_container li {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.page_license_wrap .text_wrap_bg .text_container li ul {
+  padding-left: 0px;
+  padding-top: 8px;
+}
+.page_license_wrap .text_wrap_bg .text_container li li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+.page_license_wrap .section_title h3 {
+  font-size: 24px;
+  font-weight: normal;
+  padding-left: 40px;
+  position: relative;
+  margin-top: 14px;
+}
+@media (max-width: 768px) {
+  .page_license_wrap .section_title h3 {
+    padding-left: 0;
+    padding-top: 40px;
+  }
+}
+.page_license_wrap .section_title h3 b {
+  font-size: 24px;
+}
+.page_license_wrap .section_title h3 span {
+  font-size: 20px;
+  line-height: 1.4em;
+}
+.page_license_wrap .section_title h3:before {
+  content: "01";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+.page_license_wrap .module_wrap.btn_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.page_license_wrap .module_wrap.btn_container.btn_grp {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-column-gap: 10px;
+}
+.page_license_wrap .module_wrap.btn_container.btn_grp .point_btn {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 1280px) {
+  .page_license_wrap .module_wrap.btn_container.btn_grp .point_btn {
+    width: 100%;
+  }
+}
+.page_license_wrap .module_wrap.btn_container .point_btn {
+  background-color: #005f9e !important;
+  color: white;
+  font-size: 16px;
+  padding: 15px 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+@media (max-width: 1280px) {
+  .page_license_wrap .module_wrap.btn_container .point_btn {
+    padding: 15px 30px;
+  }
+}
+.page_license_wrap .module_wrap.btn_container .point_btn b {
+  font-size: 16px;
+}
+.page_license_wrap .module_wrap.btn_container .point_btn img {
+  margin-left: 10px;
+}
+.page_license_wrap .row_container.fullwidth {
+  width: 100%;
+}
+.page_license_wrap .row_container.fullwidth .headcopy h3 {
+  font-size: 26px;
+  text-align: center;
+  font-weight: normal;
+}
+.page_license_wrap .row_container.fullwidth .align_center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.page_license_wrap .row_container.fullwidth .point_btn {
+  font-size: 20px;
+}
+
+.col_container.bg_fullwidth {
+  background-position: center center;
+  background-size: cover;
+  padding: 80px 40px;
+}
+@media (min-width: 768px) {
+  .col_container.bg_fullwidth {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
+
+.popup_license .popup_content {
+  max-width: 520px;
+  width: 90%;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #fff;
+  border: none;
+}
+.popup_license .popup_content .title_wrap {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.popup_license .popup_content .title_wrap h2 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  font-family: "Oswald";
+  text-align: center;
+}
+.popup_license .popup_content p {
+  line-height: 1.6em;
+}
+.popup_license .popup_content p .point_color {
+  color: #005f9e;
+  font-size: 16px;
+  font-weight: bold;
+}
+.popup_license .popup_content .point_btn {
+  background-color: #005f9e !important;
+  color: white;
+  font-size: 16px;
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 768px) {
+  .popup_license .popup_content .point_btn {
+    padding: 15px 60px;
+  }
+}
+.popup_license .popup_content .point_btn b {
+  font-size: 16px;
+}
+.popup_license .btn_close {
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  position: absolute;
+  color: #aaa;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
+  z-index: 2;
+}
+
 body.single.page .product_wrap.page_license_wrap {
   max-width: unset;
   width: 100%;
